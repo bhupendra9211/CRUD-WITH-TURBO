@@ -4,7 +4,7 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js',
-    './app/views/**/*',
+    './node_modules/flowbite/**/*.js'
   ],
   theme: {
     extend: {},
@@ -12,7 +12,4 @@ module.exports = {
   plugins: [
     require('flowbite/plugin')
   ],
-  content: [
-    './node_modules/flowbite/**/*.js'
-]
 }
