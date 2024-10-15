@@ -1,22 +1,23 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <%= user.name %>
+    </th>
+    <td class="px-6 py-4">
+        <%= user.email %>
+    </td>
+    <td class="px-6 py-4">
+        <%= user.address %>
+    </td>
+    <td class="px-6 py-4">
+        <%= user.contact_number %>
+    </td>
+    <td class="px-6 py-4">
+        <%= link_to "Show", user_path(user) %>
+        <%= link_to "Edit", edit_user_path(user) %>
+                        <%= link_to "Destroy", user_path(user),method: :delete, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+    </td>
+</tr>
 
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= user.address %>
-  </p>
-
-  <p>
-    <strong>Contact number:</strong>
-    <%= user.contact_number %>
-  </p>
-
-</div>
